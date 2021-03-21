@@ -7,5 +7,5 @@ import (
 
 
 func (server *Server) Home(w http.ResponseWriter, r *http.Request){
-	responses.JSON(w, http.StatusOK, "Bem vindo ao Blog do Goiaba")
+	responses.JSON(w, http.StatusOK, "Bem vindo ao Blog")
 }

@@ -15,7 +15,6 @@ var server = controllers.Server{}
 func Run() {
 
 	var err error
-	var port = os.Getenv("PORT")
 	err = godotenv.Load()
 	if err != nil {
 		log.Fatalf("Error getting env, not comming through %v", err)
@@ -27,6 +26,6 @@ func Run() {
 
 	//seed.Load(server.DB)
 
-	server.Run(port)
+	server.Run(":80")
 
 }

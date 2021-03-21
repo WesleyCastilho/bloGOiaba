@@ -30,7 +30,7 @@ func (server *Server) Initialize(Dbdriver, DbUser, DbPassword, DbPort, DbHost, D
 			fmt.Printf("Cannot connect to %s database", Dbdriver)
 			log.Fatal("This is the error:", err)
 		} else {
-			fmt.Printf("We are connected to the %s database", Dbdriver)
+			fmt.Printf("Conectado ao banco %s ", Dbdriver)
 		}
 	}
 	if Dbdriver == "postgres" {
@@ -53,6 +53,6 @@ func (server *Server) Initialize(Dbdriver, DbUser, DbPassword, DbPort, DbHost, D
 
 
 func (server *Server) Run(addr string)  {
-	fmt.Println("Listening to port 8080")
+	fmt.Println("Serviço na porta 80")
 	log.Fatal(http.ListenAndServe(addr, server.Router))
 }
